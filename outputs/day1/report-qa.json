@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-10-01T17:14:06.961894+09:00",
+  "report": "DS-MINI-Design-울산_3반-이웅희.pdf",
+  "pdf_sha256": "657e7cdbe3421717a80d7c005cfeba54882e11f4cbfa247e61d1107b643c8296",
+  "pages": 16,
+  "visual_review": {
+    "render": "Poppler pdftoppm, PNG 130 dpi",
+    "reviewed_revised_pages": [
+      1,
+      7,
+      10,
+      11,
+      12,
+      13
+    ],
+    "unchanged_pages_pixel_identical_to_previous_review": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      14,
+      15,
+      16
+    ],
+    "result": "PASS",
+    "checks": [
+      "Korean font display",
+      "page boundaries",
+      "table wrapping",
+      "no overlapping text or images"
+    ],
+    "review_note": "Revised pages reviewed by the side-conversation assistant; remaining pages are pixel-identical to the previously reviewed output."
+  },
+  "notebook": {
+    "path": "notebooks/01_day1_eda.ipynb",
+    "sha256": "8658ca2cc20144364771cd7aefe4f1f2f1001a70c1fe953e67bdd32586266589",
+    "executed_code_cells": 11,
+    "errors": 0,
+    "original_eda_code_and_outputs_unchanged": true,
+    "updated_manifest_cell_executed": true
+  },
+  "source_hashes_match": true,
+  "report_builder_sha256": "8d49df5ba5e1f4bc752787afec4d7beced511ca006bc018e2f5a2eaf0b11962e",
+  "scope": "DAY 1 existing EDA and model-strategy revision only",
+  "models_trained": false
+}

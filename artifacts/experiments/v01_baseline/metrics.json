@@ -1,0 +1,53 @@
+{
+  "experiment_id": "v01_baseline",
+  "status": "development CV baseline completed; hold-out/test evaluation pending",
+  "split_id": "5ac6e1b0a3010116290b6d6a5675dc54a9ecc17867404b891c2d9989369b9fa1",
+  "split_reused": true,
+  "batch1_cell_count": 46,
+  "development_cell_count": 35,
+  "holdout_cell_count": 11,
+  "development_group_count": 18,
+  "holdout_group_count": 5,
+  "primary": {
+    "mape_percent_mean": 7.2397944521123065,
+    "mape_percent_sample_sd": 2.471759909943339,
+    "fold_count": 5,
+    "aggregation": "unweighted arithmetic mean of fold validation MAPEs",
+    "sd_interpretation": "sample SD across folds, not a confidence interval"
+  },
+  "auxiliary": {
+    "mae_cycles_fold_mean": 60.14084116311183,
+    "mae_cycles_fold_sample_sd": 19.900395595862893,
+    "rmse_cycles_fold_mean": 72.26013155130065,
+    "rmse_cycles_fold_sample_sd": 24.875011743184693,
+    "pooled_oof_mape_percent": 7.1934318825187775,
+    "pooled_oof_interpretation": "cell-weighted pooled OOF result; auxiliary, not the reported fold-mean Train metric"
+  },
+  "evaluation_status": {
+    "holdout": "not_predicted_or_evaluated",
+    "batch2": "not_predicted_or_evaluated",
+    "batch3": "not_predicted_or_evaluated",
+    "model_selection": "not_performed",
+    "hyperparameter_tuning": "not_performed"
+  },
+  "saved_model_scope": "development cells only; not a finally selected model",
+  "development_equation_original_input_units": {
+    "stage": "development_baseline",
+    "n_fit_cells": 35,
+    "feature": "delta_q_log10var",
+    "scaler_mean": -3.8592502375675215,
+    "scaler_scale": 0.2937398549550416,
+    "coefficient_standardized": -161.87702797691844,
+    "intercept_standardized": 828.8857142857144,
+    "coefficient_original_input_units": -551.0897661527563,
+    "intercept_original_input_units": -1297.9075966603402,
+    "equation": "predicted_cycle_life = -1297.90759666 + (-551.089766153) * delta_q_log10var",
+    "target_unit": "cycles",
+    "prediction_clipping": false
+  },
+  "feature_columns": [
+    "delta_q_log10var"
+  ],
+  "target_column": "cycle_life",
+  "preprocessing_or_exclusion_applied": "StandardScaler only, fitted within each training partition; no imputation, target transformation, cell exclusion or prediction clipping"
+}

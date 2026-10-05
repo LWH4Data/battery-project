@@ -1,0 +1,124 @@
+{
+  "experiment_id": "v01_baseline",
+  "started_at_utc": "2026-10-02T01:16:46+00:00",
+  "completed_at_utc": "2026-10-02T01:16:46+00:00",
+  "input_csv": {
+    "relative_path": "outputs/day1/early_feature_candidates.csv",
+    "sha256": "dc4e7979037b974d68e88eebc66232b2221095154e747b8f2b15d32a17ddfe21"
+  },
+  "module_path": "/Users/lwh/Desktop/battery-project/src/modeling_baseline.py",
+  "module_sha256": "f3c9417da0aed4e1d745a85d067f91dbfd352e3eb155535380590b17c0729438",
+  "environment": {
+    "python": "3.12.13",
+    "python_executable": "/Users/lwh/Desktop/battery-project/.venv/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0"
+    }
+  },
+  "split_id": "5ac6e1b0a3010116290b6d6a5675dc54a9ecc17867404b891c2d9989369b9fa1",
+  "split_reused": true,
+  "group_key": "policy_readable",
+  "cv_shuffle": true,
+  "random_state": 42,
+  "evaluation_status": {
+    "holdout": "not_predicted_or_evaluated",
+    "batch2": "not_predicted_or_evaluated",
+    "batch3": "not_predicted_or_evaluated",
+    "model_selection": "not_performed",
+    "hyperparameter_tuning": "not_performed"
+  },
+  "saved_model_fit_cell_ids": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    16,
+    17,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    30,
+    31,
+    32,
+    33,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "saved_model_is_finally_selected": false,
+  "feature_columns": [
+    "delta_q_log10var"
+  ],
+  "target_column": "cycle_life",
+  "target_transform": "none",
+  "prediction_clipping": false,
+  "all_batch1_cells_preserved": true,
+  "oof_prediction_count_per_development_cell": 1,
+  "holdout_cell_ids_reserved": [
+    0,
+    1,
+    2,
+    14,
+    15,
+    18,
+    19,
+    28,
+    29,
+    34,
+    35
+  ],
+  "artifacts": {
+    "cv_metrics": {
+      "relative_path": "artifacts/experiments/v01_baseline/cv_metrics.csv",
+      "sha256": "890fdcb23bdbe86c17034425f40f74ab2392956cf0cf913e7bed82800f7fb683"
+    },
+    "cv_predictions": {
+      "relative_path": "artifacts/experiments/v01_baseline/cv_predictions.csv",
+      "sha256": "a3d7f4decd539565a27785166f8a5defd95482c083375a15915362728d858707"
+    },
+    "metrics": {
+      "relative_path": "artifacts/experiments/v01_baseline/metrics.json",
+      "sha256": "3c4a6d6afd23e9a7b919723727b6caccd4f65418e28a46097e92b10d1b616eba"
+    },
+    "model": {
+      "relative_path": "artifacts/experiments/v01_baseline/model.joblib",
+      "sha256": "d726182366ee102d0a89876fa8ceab50e28c70250597fae3141f4d7144c43b65"
+    },
+    "configuration": {
+      "relative_path": "configs/experiments/v01_baseline.json",
+      "sha256": "a5a05b776b1e2a2a4b3c5cc1dabb679d08b868ab6579b6cf019fcc27688083fa"
+    },
+    "split_manifest": {
+      "relative_path": "artifacts/splits/batch1_group_holdout_cv.json",
+      "sha256": "5f368b8966ff1dddf4d8c2c505b0dd24b14c67bc0fab20701464348b676edb1a"
+    },
+    "split_assignments": {
+      "relative_path": "artifacts/splits/split_assignments.csv",
+      "sha256": "d3782b4e24a824d350d395a479451961da9a785967a44d1743c56ad4e10f98be"
+    }
+  }
+}

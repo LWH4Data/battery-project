@@ -1,0 +1,7 @@
+experiment_id,index,mape_percent,gap_percentage_points,status,note
+v01_baseline,Train (Batch 1 CV),7.2397944521123065,,completed,unweighted mean of 5 development validation folds
+v01_baseline,Valid (Batch 1 Hold-out),,,not_evaluated,11 cells / 5 protocol groups reserved
+v01_baseline,Test (Batch 2),,,not_evaluated,mandatory final evaluation; 39 valid targets out of 47 original cells
+v01_baseline,Gap (Train-Valid),,,not_computed,evaluation and subtraction direction pending
+v01_baseline,Gap (Valid-Test),,,not_computed,evaluation and subtraction direction pending
+v01_baseline,Gap (Target-Test),,,not_computed,Batch 2 Test vs assignment target MAPE 9.1%; subtraction direction pending

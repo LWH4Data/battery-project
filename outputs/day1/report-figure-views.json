@@ -1,0 +1,16 @@
+{
+  "purpose": "Report readability views of executed Q4/Q5 exploratory results",
+  "new_model_fitting": false,
+  "source_results": [
+    "q1_q4_results.json",
+    "q3_q5_results.json"
+  ],
+  "figures": [
+    "q2_report_degradation.png",
+    "q4_report_current_patterns.png",
+    "q4_report_current_life.png",
+    "q4_report_current_slope.png",
+    "q5_report_redundancy.png",
+    "q5_report_correlations.png"
+  ]
+}

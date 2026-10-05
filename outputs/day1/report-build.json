@@ -1,0 +1,13 @@
+{
+  "report": "DS-MINI-Design-울산_3반-이웅희.pdf",
+  "built_at": "2026-10-01T17:07:34.395603+09:00",
+  "reportlab": "4.4.9",
+  "model_strategy": "Linear regression baseline; Ridge and Elastic Net with fold-local standardization",
+  "source_artifacts": {
+    "outputs/day1/q1_q4_results.json": "642cdad78523ae7a6e556c5ad840605ed22ab07bcb2fa0373c828f4351966835",
+    "outputs/day1/q2_results.json": "ac722109020ca0da41bdd2847375966f206c0b2c110a1339c48e993c4e881ad5",
+    "outputs/day1/q3_q5_results.json": "369eeaf1a0971452d56f488a337a4c4f1ce3d43679d6fe97f7e4ec9a0230f497",
+    "outputs/day1/tree_constraints.json": "e39457f0e517093f43539e9043a21e60650c36821f88399bfe9c3834a7405959"
+  },
+  "pdf_sha256": "657e7cdbe3421717a80d7c005cfeba54882e11f4cbfa247e61d1107b643c8296"
+}

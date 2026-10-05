@@ -1,0 +1,156 @@
+{
+  "status": "DAY 1 descriptive structural diagnostic; no model fitted",
+  "source_csv": "outputs/day1/early_feature_candidates.csv",
+  "source_csv_sha256": "dc4e7979037b974d68e88eebc66232b2221095154e747b8f2b15d32a17ddfe21",
+  "raw_snapshot_reference": "configs/data-snapshot.json",
+  "raw_snapshots": [
+    {
+      "batch_id": "batch1",
+      "path": "data/raw/batch1/2017-05-12_batchdata_updated_struct_errorcorrect.mat",
+      "size_bytes": 3025320241,
+      "mtime_ns": 1790831023925458397,
+      "sha256": "9d928ab978f0e3c70b31cb833a749fedd35094d01af76475d69b40aa3497f5ba"
+    },
+    {
+      "batch_id": "batch2",
+      "path": "data/raw/batch2/2018-02-20_batchdata_updated_struct_errorcorrect.mat",
+      "size_bytes": 2022599329,
+      "mtime_ns": 1790831029011801696,
+      "sha256": "3487db505ad08b6c805f41dd0560e73b54077c76aca04f706f06e2356ccf7845"
+    },
+    {
+      "batch_id": "batch3",
+      "path": "data/raw/batch3/2018-04-12_batchdata_updated_struct_errorcorrect.mat",
+      "size_bytes": 3236690412,
+      "mtime_ns": 1790831034244296473,
+      "sha256": "62c30e413b63e6144720e016deed3661fac8468641794a5807b123fe84717998"
+    }
+  ],
+  "original_cells_retained": 139,
+  "target_definition": "Original cycle_life field, without target transformation or correction.",
+  "b1_full_label_support_cycles": [
+    534.0,
+    1227.0
+  ],
+  "batch_statistics": {
+    "batch1": {
+      "original_cell_count": 46,
+      "finite_positive_label_count": 46,
+      "nonfinite_label_count": 0,
+      "nonpositive_finite_label_count": 0,
+      "below_b1_full_label_min_count": 0,
+      "above_b1_full_label_max_count": 0,
+      "within_b1_full_label_range_count": 46,
+      "original_finite_label_min": 534.0,
+      "original_finite_label_max": 1227.0,
+      "oracle_range_constrained_mape_lower_bound_percent": 0.0,
+      "below_range_cell_ids": [],
+      "above_range_cell_ids": [],
+      "nonfinite_label_cell_ids": []
+    },
+    "batch2": {
+      "original_cell_count": 47,
+      "finite_positive_label_count": 39,
+      "nonfinite_label_count": 8,
+      "nonpositive_finite_label_count": 0,
+      "below_b1_full_label_min_count": 30,
+      "above_b1_full_label_max_count": 0,
+      "within_b1_full_label_range_count": 9,
+      "original_finite_label_min": 392.0,
+      "original_finite_label_max": 1186.0,
+      "oracle_range_constrained_mape_lower_bound_percent": 14.283140599886456,
+      "below_range_cell_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        41,
+        42,
+        46
+      ],
+      "above_range_cell_ids": [],
+      "nonfinite_label_cell_ids": [
+        22,
+        23,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    },
+    "batch3": {
+      "original_cell_count": 46,
+      "finite_positive_label_count": 44,
+      "nonfinite_label_count": 2,
+      "nonpositive_finite_label_count": 0,
+      "below_b1_full_label_min_count": 0,
+      "above_b1_full_label_max_count": 9,
+      "within_b1_full_label_range_count": 35,
+      "original_finite_label_min": 541.0,
+      "original_finite_label_max": 1935.0,
+      "oracle_range_constrained_mape_lower_bound_percent": 4.045701043309044,
+      "below_range_cell_ids": [],
+      "above_range_cell_ids": [
+        2,
+        7,
+        16,
+        17,
+        33,
+        37,
+        38,
+        42,
+        45
+      ],
+      "nonfinite_label_cell_ids": [
+        23,
+        32
+      ]
+    }
+  },
+  "floor_formula": "100/n * sum(abs(clip(y_i, min_y_B1, max_y_B1)-y_i)/y_i) over finite positive evaluation labels.",
+  "floor_interpretation": "The true target is used as an oracle to choose the closest allowed output. This is the smallest possible MAPE of any predictor whose outputs are restricted to the full Batch 1 label interval; it is not a trained-model prediction, a model score, or an achievable score estimate.",
+  "decision_tree_random_forest_scope": "For ordinary squared-error regression trees, leaf outputs are means of training labels. RandomForestRegressor averages these tree predictions, so outputs stay inside the training-label interval. The full Batch 1 interval yields an optimistic bound; a smaller training subset can narrow it further.",
+  "catboost_scope": "CatBoost predicts scale * sum(tree leaf values) + bias, rather than averaging target-label means. Its output is not guaranteed to lie inside the training-label interval. This does not establish reliable extrapolation: numeric tree thresholds still define piecewise-constant regions and no unobserved linear trend is automatically continued.",
+  "comparison_target": {
+    "assignment_regression_mape_percent": 9.1,
+    "is_measured_model_result": false,
+    "caution": "The assignment target and these original batches can differ in label corrections, exclusion rules and evaluation denominator; no reproduction claim."
+  },
+  "limitations": [
+    "The diagnostic preserves all 139 original rows. Nonfinite targets remain present but cannot contribute to a finite MAPE denominator.",
+    "The eventual missing-label handling and Day 2 evaluation denominator remain subject to user design decisions.",
+    "No target correction, interpolation, cell deletion, extra model, package installation, hyperparameter tuning or prediction fitting.",
+    "Batch 2 and Batch 3 target distributions were observed in assignment-required EDA. This is not a completely unseen test analysis.",
+    "The support floor applies only to predictors constrained to the stated label range. It is not a universal lower bound for all tree boosting methods."
+  ],
+  "official_references": {
+    "tree_piecewise_constant_leaf_mean": "https://scikit-learn.org/stable/modules/tree.html",
+    "random_forest_average_predictions": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html",
+    "catboost_sum_leaf_values_formula": "https://catboost.ai/docs/en/concepts/python-reference_catboostregressor_get_scale_and_bias"
+  }
+}

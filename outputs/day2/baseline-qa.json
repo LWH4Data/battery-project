@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-10-02T10:20:05.516163+09:00",
+  "notebook": "notebooks/02_day2_modeling.ipynb",
+  "notebook_sha256": "98a5acddc7a05b12e6a753959c85b628ead113f419550889d47a19ed18c8cc13",
+  "executed_code_cells": 6,
+  "notebook_errors": 0,
+  "metric_recalculation": "PASS",
+  "artifact_manifest_hashes": "PASS",
+  "group_separation_and_oof_counts": "PASS",
+  "independent_code_review": "PASS",
+  "figure_visual_review": "PASS: legible labels, no clipping or overlap",
+  "holdout_or_test_predicted": false
+}

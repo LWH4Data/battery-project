@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-02T11:28:36.639626+09:00",
+  "status": "progress report; required final evaluations pending",
+  "pages": 4,
+  "visual_review": "PASS: all four rendered pages inspected; Korean text, tables, plot labels and footer intact",
+  "source_hashes_match": true,
+  "pdf_sha256": "ea23c5f7ab2a41ef8ff97c03ed62677002885286eeb446bf779f752c58cce7eb",
+  "missing_required_results": [
+    "Holdout",
+    "Batch2 Test",
+    "three performance Gaps"
+  ],
+  "pending_design_question": true
+}

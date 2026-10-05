@@ -1,0 +1,49 @@
+{
+  "document_updated_on": "2026-10-05",
+  "timezone": "Asia/Seoul",
+  "project_version": "0.1.0",
+  "experiment_version": "v01_baseline",
+  "scope": "developer README, Day 2 submission requirements, existing OOF summary only",
+  "source_paths": {
+    "metrics": "artifacts/experiments/v01_baseline/metrics.json",
+    "oof_predictions": "artifacts/experiments/v01_baseline/cv_predictions.csv",
+    "run_manifest": "artifacts/experiments/v01_baseline/run-manifest.json"
+  },
+  "source_hash_checks": "PASS: metrics, OOF, modeling source and input CSV match run manifest",
+  "relative_links": {
+    "status": "PASS",
+    "checked_count": 29
+  },
+  "performance_rows": 6,
+  "development_oof_cells": 35,
+  "new_model_training_or_test_evaluation": false,
+  "model_selection": "not_performed",
+  "holdout_and_batch2": "not_evaluated",
+  "official_submission": "Public GitHub repository URL; DAY 2 16:00",
+  "github_publication": "public repository created; initial push prepared",
+  "outputs": {
+    "README.md": {
+      "staged_path": "/Users/lwh/Documents/Codex/2026-10-01/new-chat-2/work/README.day2.md",
+      "sha256": "873a3a4d78850f0f91995a73f094a1ef0eb64d72478c1d87170ad11d9ed0994e"
+    },
+    "data/README.md": {
+      "staged_path": "/Users/lwh/Documents/Codex/2026-10-01/new-chat-2/work/data.README.day2.md",
+      "sha256": "c4bc962af31c2427c0dfcf004757ee342684f08d396c4e4bd129950e1aafa0fc"
+    },
+    "outputs/day2/model_performance.csv": {
+      "staged_path": "/Users/lwh/Documents/Codex/2026-10-01/new-chat-2/work/model_performance.csv",
+      "sha256": "5adfe6fbdab1da0e9f936b3c96a0f41c19c93951fbe478848916c23a00355231"
+    },
+    "outputs/day2/oof_error_analysis.csv": {
+      "staged_path": "/Users/lwh/Documents/Codex/2026-10-01/new-chat-2/work/oof_error_analysis.csv",
+      "sha256": "23f93968e9a9c21d1afbea4c7ce6bd20ffa8e8e17ecf45432510cb14216eb7bd"
+    },
+    "outputs/project-output-guidelines.md": {
+      "staged_path": "/Users/lwh/Documents/Codex/2026-10-01/new-chat-2/work/project-output-guidelines.day2.md",
+      "sha256": "4d6fbc71c199b2b65c3b7eaea95455a33f35c473a6533b45b049053231d1b4af"
+    }
+  },
+  "canonical_write_status": "PASS",
+  "review_status": "PASS: source, environment, entrypoints, confirmed/pending states reviewed",
+  "github_repository": "https://github.com/LWH4Data/battery-project"
+}

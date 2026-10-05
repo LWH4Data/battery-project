@@ -1,0 +1,99 @@
+{
+  "experiment_id": "v01_baseline",
+  "started_at_utc": "2026-10-02T01:16:46+00:00",
+  "input_csv": {
+    "relative_path": "outputs/day1/early_feature_candidates.csv",
+    "sha256": "dc4e7979037b974d68e88eebc66232b2221095154e747b8f2b15d32a17ddfe21"
+  },
+  "module_path": "/Users/lwh/Desktop/battery-project/src/modeling_baseline.py",
+  "module_sha256": "f3c9417da0aed4e1d745a85d067f91dbfd352e3eb155535380590b17c0729438",
+  "environment": {
+    "python": "3.12.13",
+    "python_executable": "/Users/lwh/Desktop/battery-project/.venv/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0"
+    }
+  },
+  "split_id": "5ac6e1b0a3010116290b6d6a5675dc54a9ecc17867404b891c2d9989369b9fa1",
+  "split_manifest": "artifacts/splits/batch1_group_holdout_cv.json",
+  "split_settings": {
+    "batch": "batch1",
+    "expected_cell_count": 46,
+    "expected_group_count": 23,
+    "group_key": "policy_readable",
+    "group_key_normalization": "none; original policy_readable string",
+    "group_key_evidence": "All 23 Batch 1 original policy strings match the 23 numeric (C1, SOC_percent, C2) groups; no whitespace variants.",
+    "holdout": {
+      "method": "GroupShuffleSplit",
+      "n_splits": 1,
+      "test_size": 0.2,
+      "random_state": 42
+    },
+    "cv": {
+      "method": "GroupKFold",
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 42,
+      "scope": "development partition only"
+    }
+  },
+  "features": [
+    "delta_q_log10var"
+  ],
+  "feature_definition": "log10 of population variance (ddof=0) of original Qdlin(cycle 100)-Qdlin(cycle 10) over the verified common 1000-point Vdlin grid; Ah^2 numerical values, without epsilon.",
+  "target": {
+    "column": "cycle_life",
+    "definition": "Original final cycle_life",
+    "unit": "cycles",
+    "transformation": "none",
+    "correction": "none"
+  },
+  "observation_scope": "first 100 cycles; the only feature uses actual cycles 10 and 100",
+  "model": {
+    "class": "sklearn.linear_model.LinearRegression",
+    "parameters": {
+      "copy_X": true,
+      "fit_intercept": true,
+      "n_jobs": null,
+      "positive": false,
+      "tol": 1e-06
+    }
+  },
+  "preprocessing": {
+    "class": "sklearn.preprocessing.StandardScaler",
+    "parameters": {
+      "copy": true,
+      "with_mean": true,
+      "with_std": true
+    },
+    "fit_scope": "each CV training fold; final baseline on development cells only",
+    "imputation": "none",
+    "sampling": "none",
+    "cell_exclusion": "none"
+  },
+  "target_transform": "none",
+  "prediction_clipping": false,
+  "primary_metric": {
+    "name": "MAPE_percent",
+    "aggregation": "arithmetic mean of the five validation-fold MAPEs",
+    "uncertainty_summary": "sample standard deviation across five folds (ddof=1), not a confidence interval"
+  },
+  "auxiliary_metrics": [
+    "mean validation-fold MAE_cycles",
+    "mean validation-fold RMSE_cycles",
+    "pooled development OOF MAPE_percent"
+  ],
+  "evaluation_status": {
+    "holdout": "not_predicted_or_evaluated",
+    "batch2": "not_predicted_or_evaluated",
+    "batch3": "not_predicted_or_evaluated",
+    "model_selection": "not_performed",
+    "hyperparameter_tuning": "not_performed"
+  },
+  "saved_model_scope": "all development cells only; baseline, not a finally selected model"
+}

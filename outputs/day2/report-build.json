@@ -1,0 +1,13 @@
+{
+  "report": "DS-MINI-Day2-울산_3반-이웅희.pdf",
+  "status": "progress report; required final evaluations pending",
+  "built_at": "2026-10-02T11:27:11.569585+09:00",
+  "reportlab": "4.4.9",
+  "source_artifacts": {
+    "artifacts/experiments/v01_baseline/metrics.json": "3c4a6d6afd23e9a7b919723727b6caccd4f65418e28a46097e92b10d1b616eba",
+    "artifacts/experiments/v01_baseline/cv_metrics.csv": "890fdcb23bdbe86c17034425f40f74ab2392956cf0cf913e7bed82800f7fb683",
+    "configs/environment.json": "608e887d6168e6c755e038e82d6204d2f192dde28db54ab70329e0de45db1d4a",
+    "outputs/day2/v01_baseline_cv.png": "3d27a5f515c39cd7d7d2cd6399df48c17c744dad5f87feb3082dbf2b250ba06a"
+  },
+  "pdf_sha256": "ea23c5f7ab2a41ef8ff97c03ed62677002885286eeb446bf779f752c58cce7eb"
+}

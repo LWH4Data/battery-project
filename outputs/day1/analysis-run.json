@@ -1,0 +1,45 @@
+{
+  "scope": "DAY 1 EDA and model design only",
+  "student": "울산 3반 이웅희",
+  "target": "original cycle_life, regression",
+  "observation_limit_cycle": 100,
+  "source_snapshot": "configs/data-snapshot.json",
+  "source_hashes": {
+    "src/data.py": "01b20861c550cd8089cce85e9fc1ceb676b90ba54e3d23b40f370ada9337ced1",
+    "src/eda_distribution_protocol.py": "8497cc5d472ab06f6f730b9906662f955196d62c653e351444aad67992b196ac",
+    "src/eda_degradation.py": "e7bbf2f359252fdba4dad20ff81fa6194129cc03029b3c669a3074b91914620d",
+    "src/eda_early_signals.py": "26c283f401bde4dd616da576c781752804d329163e2ca9e56f3672c7e69c508f",
+    "src/eda_tree_constraints.py": "4ebebf0c412f6aa78ca39e97f9cdcb59ce1d1f4fad83878dde3c5c735412c478",
+    "src/eda_report_figures.py": "a28fae9c1018af6fccc7a580544c33865738cbfa447dc430b65bf9992f1c9b27"
+  },
+  "environment": {
+    "recorded_on": "2026-10-01",
+    "timezone": "Asia/Seoul",
+    "python": "3.12.13",
+    "executable": "/Users/lwh/Desktop/battery-project/.venv/bin/python",
+    "uv": "0.12.19",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "packages": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "h5py": "3.16.0",
+      "mat73": "0.65",
+      "ipykernel": "7.4.0"
+    },
+    "checks": [
+      "imports",
+      "array and table operations",
+      "MAT round-trip",
+      "HDF5 round-trip",
+      "plot rendering",
+      "project Python notebook kernel"
+    ]
+  },
+  "hypothesis_test": "Batch2 Welch primary and exact permutation supplementary, two-sided alpha=0.05",
+  "random_sampling_used": false,
+  "no_model_performance_reported": true,
+  "model_direction": "Linear regression baseline; Ridge and Elastic Net with fold-local standardization"
+}
