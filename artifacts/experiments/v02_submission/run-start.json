@@ -1,0 +1,132 @@
+{
+  "started_at_utc": "2026-10-05T11:07:40.426643+00:00",
+  "configuration": {
+    "schema_version": 1,
+    "experiment_id": "v02_submission",
+    "decision_status": "user_approved_final_submission_design",
+    "source_csv": "outputs/day1/early_feature_candidates.csv",
+    "source_csv_sha256": "dc4e7979037b974d68e88eebc66232b2221095154e747b8f2b15d32a17ddfe21",
+    "split_manifest": "artifacts/splits/batch1_group_holdout_cv.json",
+    "split_id": "5ac6e1b0a3010116290b6d6a5675dc54a9ecc17867404b891c2d9989369b9fa1",
+    "random_state": 42,
+    "features": [
+      "delta_q_log10var"
+    ],
+    "target": "cycle_life",
+    "target_transform": "none",
+    "observation_scope": "first 100 cycles; actual cycles 10 and 100 for this feature",
+    "feature_definition": "log10(var(Qdlin_100-Qdlin_10, ddof=0)) on the verified original common 1000-point Vdlin grid; numeric Ah^2 variance; no epsilon",
+    "preprocessing": "StandardScaler fitted on each training partition only",
+    "imputation": "none",
+    "cell_exclusion": "none",
+    "prediction_clipping": false,
+    "candidate_models": [
+      "LinearRegression",
+      "Ridge",
+      "ElasticNet"
+    ],
+    "alpha_values": [
+      0.0001,
+      0.00031622776601683794,
+      0.001,
+      0.0031622776601683794,
+      0.01,
+      0.03162277660168379,
+      0.1,
+      0.31622776601683794,
+      1.0,
+      3.1622776601683795,
+      10.0,
+      31.622776601683793,
+      100.0,
+      316.22776601683796,
+      1000.0,
+      3162.2776601683795,
+      10000.0
+    ],
+    "elastic_net_l1_ratio_values": [
+      0.1,
+      0.5,
+      0.9
+    ],
+    "candidate_count": 69,
+    "grid_search": {
+      "class": "sklearn.model_selection.GridSearchCV",
+      "n_jobs": 1,
+      "error_score": "raise",
+      "refit": false,
+      "selection_metric": "lowest unweighted arithmetic mean of five validation-fold MAPE values",
+      "exact_tie_break": "fixed order: LinearRegression, Ridge then ElasticNet; within family ascending alpha then ascending l1_ratio; exact floats only, no tolerance",
+      "cv": "explicit saved five-fold group indices on the 35 development cells",
+      "optuna_used": false
+    },
+    "fixed_solver_settings": {
+      "Ridge": {
+        "solver": "svd",
+        "fit_intercept": true
+      },
+      "ElasticNet": {
+        "selection": "cyclic",
+        "max_iter": 100000,
+        "tol": 1e-08,
+        "random_state": 42,
+        "fit_intercept": true
+      },
+      "convergence_warnings": "raise and stop; no performance-dependent solver adjustments"
+    },
+    "fit_and_evaluation_order": [
+      "69-setting group CV using development 35 cells only",
+      "lock the winner and training design on disk before hold-out/test prediction",
+      "fit winner on development 35 cells and evaluate hold-out 11 cells once",
+      "refit the same winner parameters on all Batch 1 46 cells",
+      "predict all Batch 2 47 cells once and evaluate the 39 known positive targets"
+    ],
+    "primary_metric": "MAPE_percent",
+    "auxiliary_metrics": [
+      "MAE_cycles",
+      "RMSE_cycles",
+      "pooled_OOF_MAPE_percent"
+    ],
+    "paper_target_mape_percent": 9.1,
+    "gaps_percent_points": {
+      "Train-Valid": "Valid MAPE minus CV mean MAPE",
+      "Valid-Test": "Batch 2 MAPE minus Valid MAPE",
+      "Target-Test": "Batch 2 MAPE minus 9.1"
+    },
+    "batch2_missing_target_policy": "preserve all 47 rows and predictions; compute errors and metrics only for 39 known targets; preserve eight unknown targets without imputation",
+    "batch3": "not evaluated; optional assignment omitted",
+    "reproduction_policy": "fixed-winner replay only; no search or selection; writes a separate reproduction and is not an independent final test"
+  },
+  "provenance": {
+    "source_csv": {
+      "relative_path": "outputs/day1/early_feature_candidates.csv",
+      "sha256": "dc4e7979037b974d68e88eebc66232b2221095154e747b8f2b15d32a17ddfe21"
+    },
+    "module_sha256": "83632863a9f9de16f3f6645eb3b1c6ca1f8d2a663d91caf01c773adbbfb5b171",
+    "baseline_module_sha256": "f3c9417da0aed4e1d745a85d067f91dbfd352e3eb155535380590b17c0729438",
+    "split_manifest_sha256": "5f368b8966ff1dddf4d8c2c505b0dd24b14c67bc0fab20701464348b676edb1a",
+    "split_assignments_sha256": "d3782b4e24a824d350d395a479451961da9a785967a44d1743c56ad4e10f98be",
+    "config_sha256": "abc8873f375acf4d47bb178d3be5c21b5abac8f95abeb0ea9281efe84ab8ae32",
+    "uv_lock_sha256": "d20ac2bf39ff77981d3c3894c644b937f1df55e90870ca43a314602b1b63e659",
+    "environment": {
+      "python": "3.12.13",
+      "python_executable": "/Users/lwh/Desktop/battery-project/.venv/bin/python",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.9.1",
+        "joblib": "1.6.0"
+      }
+    },
+    "git": {
+      "head_revision": "5d2de0bb87c7a3baa97e57d3749b3fe4013860c1",
+      "working_tree_status": "M .gitattributes\n M .gitignore\n M notebooks/00_data_check.ipynb\n M notebooks/01_day1_eda.ipynb\n M notebooks/02_day2_modeling.ipynb\n M outputs/day1/day1-report.md\n M outputs/day2/baseline-summary.md\n M outputs/project-output-guidelines.md\n M pyproject.toml\n M uv.lock\n?? configs/experiments/v02_submission.json\n?? notebooks/03_day2_final_model.ipynb\n?? outputs/day2/notebook-setup-qa.json\n?? src/day2_final_figures.py\n?? src/modeling_submission.py",
+      "note": "Run-time module/config hashes identify uncommitted changes independently of the prior HEAD."
+    }
+  },
+  "mode": "original_final_evaluation",
+  "holdout_status": "not predicted",
+  "batch2_status": "not loaded for evaluation or predicted"
+}

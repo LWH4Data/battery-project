@@ -38,7 +38,7 @@
 | 4 | 29 | 6 | 4.4729 |
 | 5 | 29 | 6 | 9.2449 |
 
-![Fold별 MAPE와 개발 셀의 CV 예측](/Users/lwh/Desktop/battery-project/outputs/day2/v01_baseline_cv.png)
+![Fold별 MAPE와 개발 셀의 CV 예측](v01_baseline_cv.png)
 
 ## 해석
 

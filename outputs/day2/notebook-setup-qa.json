@@ -1,0 +1,22 @@
+{
+  "scope": "setup cells only; no EDA/modeling rerun",
+  "source_validation": "original size and SHA-256 verified",
+  "checks": [
+    {
+      "notebook": "00_data_check.ipynb",
+      "setup_status": "PASS",
+      "setup_sha256": "c8870bc2fef9ae57b7979dad39641995b2cd7672d8b7490204616f6be50ff55b"
+    },
+    {
+      "notebook": "01_day1_eda.ipynb",
+      "setup_status": "PASS",
+      "setup_sha256": "501d43b73b4d497800b4a672e7e24e08f764b3016891838c75af0f23efc86373"
+    },
+    {
+      "notebook": "02_day2_modeling.ipynb",
+      "setup_status": "PASS",
+      "setup_sha256": "f43d79a15bde4d0b21cbc7a46db1ecdca8c627851cbab446206346641ba4c6a8"
+    }
+  ],
+  "new_model_fitting_or_test_predictions": false
+}

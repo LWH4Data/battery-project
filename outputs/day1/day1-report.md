@@ -34,7 +34,7 @@ QUESTION 01
 
 그림 1. 150-2,300사이클 공통 구간의 원본 수명 분포. 원본 셀은 보존하고 수명 집계는 유효한 타깃만 사용하며 결측은 별도 기록한다.
 
-![그림 1. 150-2,300사이클 공통 구간의 원본 수명 분포. 원본 셀은 보존하고 수명 집계는 유효한 타깃만 사용하며 결측은 별도 기록한다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q1_life_distribution.png)
+![그림 1. 150-2,300사이클 공통 구간의 원본 수명 분포. 원본 셀은 보존하고 수명 집계는 유효한 타깃만 사용하며 결측은 별도 기록한다.](figures/q1_life_distribution.png)
 
 | 배치 | 유효/전체 | 평균 ± SD | 중앙값 | 범위 | 단/장수명 |
 | --- | --- | --- | --- | --- | --- |
@@ -62,7 +62,7 @@ QUESTION 02 / A
 
 그림 2. 모든 셀의 원본 방전 용량: 위는 전체 범위, 아래는 확대 보기. 빨간 점은 Qd>1.3Ah 진단 표시, 빨간 ×는 Batch 1의 빈 상세 측정 marker다. 데이터 삭제 없이 표시했다.
 
-![그림 2. 모든 셀의 원본 방전 용량: 위는 전체 범위, 아래는 확대 보기. 빨간 점은 Qd>1.3Ah 진단 표시, 빨간 ×는 Batch 1의 빈 상세 측정 marker다. 데이터 삭제 없이 표시했다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q2_report_degradation.png)
+![그림 2. 모든 셀의 원본 방전 용량: 위는 전체 범위, 아래는 확대 보기. 빨간 점은 Qd>1.3Ah 진단 표시, 빨간 ×는 Batch 1의 빈 상세 측정 marker다. 데이터 삭제 없이 표시했다.](figures/q2_report_degradation.png)
 
 초기 10-100사이클과 마지막 관측 100사이클의 Theil-Sen 기울기로 초기/후기 변화를 비교했다. 원본 스파이크를 삭제하지 않았으며 배치별 수치는 다음 페이지에 정리했다.
 
@@ -80,7 +80,7 @@ Knee는 탐색 후보이며, 관측 끝점도 검증 대상이다
 
 그림 3. 배치별 예시 셀의 연속 두 직선 변화점. 예시는 탐색 후보 중 관측 길이 중앙값 부근의 셀이고, 전체 배치를 대표한다고 가정하지 않는다.
 
-![그림 3. 배치별 예시 셀의 연속 두 직선 변화점. 예시는 탐색 후보 중 관측 길이 중앙값 부근의 셀이고, 전체 배치를 대표한다고 가정하지 않는다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q2_knee_examples.png)
+![그림 3. 배치별 예시 셀의 연속 두 직선 변화점. 예시는 탐색 후보 중 관측 길이 중앙값 부근의 셀이고, 전체 배치를 대표한다고 가정하지 않는다.](figures/q2_knee_examples.png)
 
 | 탐색 결과 | Batch 1 | Batch 2 | Batch 3 |
 | --- | --- | --- | --- |
@@ -110,7 +110,7 @@ QUESTION 03 / A
 
 그림 4. 장수명·단수명 셀의 ΔQ(V). 가는 선은 개별 셀, 굵은 선은 그룹 평균이다. 중간 수명·타깃 미상 셀은 이 비교 그림에서만 제외하며 원본에 유지한다.
 
-![그림 4. 장수명·단수명 셀의 ΔQ(V). 가는 선은 개별 셀, 굵은 선은 그룹 평균이다. 중간 수명·타깃 미상 셀은 이 비교 그림에서만 제외하며 원본에 유지한다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q3_delta_q_curves.png)
+![그림 4. 장수명·단수명 셀의 ΔQ(V). 가는 선은 개별 셀, 굵은 선은 그룹 평균이다. 중간 수명·타깃 미상 셀은 이 비교 그림에서만 제외하며 원본에 유지한다.](figures/q3_delta_q_curves.png)
 
 | 검증 항목 | 실제 확인 결과 |
 | --- | --- |
@@ -134,7 +134,7 @@ Batch 2의 장수명 3셀과 단수명 28셀 비교 | 양측 검정 | α=0.05
 
 그림 5. 셀별 log10(ΔQ 분산)과 정확 순열검정의 평균 차이 분포. 1,000개 전압 좌표는 한 셀의 신호 계산에만 쓰며 독립 표본 수로 세지 않는다.
 
-![그림 5. 셀별 log10(ΔQ 분산)과 정확 순열검정의 평균 차이 분포. 1,000개 전압 좌표는 한 셀의 신호 계산에만 쓰며 독립 표본 수로 세지 않는다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q3_test_result.png)
+![그림 5. 셀별 log10(ΔQ 분산)과 정확 순열검정의 평균 차이 분포. 1,000개 전압 좌표는 한 셀의 신호 계산에만 쓰며 독립 표본 수로 세지 않는다.](figures/q3_test_result.png)
 
 **주 가설:** H0: 장수명·단수명 그룹의 모집단 log10(ΔQ 분산) 평균이 같다. H1: 두 평균이 다르다. 분산은 Ah² 수치로 ddof=0을 적용한 뒤 log10 변환했다. 다른 ΔQ 통계의 유의성 검정은 수행하지 않았다.
 
@@ -160,7 +160,7 @@ QUESTION 04 / A
 
 그림 6. 첫 충전 단계 C1과 수명. 프로토콜의 전환 SOC·C2·실험 조건이 동시에 달라 단일 C1 관계만으로 원인을 판단할 수 없다.
 
-![그림 6. 첫 충전 단계 C1과 수명. 프로토콜의 전환 SOC·C2·실험 조건이 동시에 달라 단일 C1 관계만으로 원인을 판단할 수 없다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q4_c1_life_relationship.png)
+![그림 6. 첫 충전 단계 C1과 수명. 프로토콜의 전환 SOC·C2·실험 조건이 동시에 달라 단일 C1 관계만으로 원인을 판단할 수 없다.](figures/q4_c1_life_relationship.png)
 
 | 배치 | 평균 위치 | 원문 프로토콜 | 평균 수명 | 유효 n |
 | --- | --- | --- | --- | --- |
@@ -187,15 +187,15 @@ QUESTION 04 / B
 
 그림 7. 각 배치 cell 0의 실제 cycle 10 전류. 원본 I/t 단위이며 셀 0은 형태 확인용 예시다.
 
-![그림 7. 각 배치 cell 0의 실제 cycle 10 전류. 원본 I/t 단위이며 셀 0은 형태 확인용 예시다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q4_report_current_patterns.png)
+![그림 7. 각 배치 cell 0의 실제 cycle 10 전류. 원본 I/t 단위이며 셀 0은 형태 확인용 예시다.](figures/q4_report_current_patterns.png)
 
 그림 8a. cycle 10, I>0인 표본의 평균과 수명. 전체 ρ=+0.436인데 배치 내부 방향은 달라진다.
 
-![그림 8a. cycle 10, I>0인 표본의 평균과 수명. 전체 ρ=+0.436인데 배치 내부 방향은 달라진다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q4_report_current_life.png)
+![그림 8a. cycle 10, I>0인 표본의 평균과 수명. 전체 ρ=+0.436인데 배치 내부 방향은 달라진다.](figures/q4_report_current_life.png)
 
 그림 8b. 같은 평균 전류와 초기 10-100 Qd 기울기. 전체 ρ=-0.459. 기울기는 원본 값의 OLS 서술 통계다.
 
-![그림 8b. 같은 평균 전류와 초기 10-100 Qd 기울기. 전체 ρ=-0.459. 기울기는 원본 값의 OLS 서술 통계다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q4_report_current_slope.png)
+![그림 8b. 같은 평균 전류와 초기 10-100 Qd 기울기. 전체 ρ=-0.459. 기울기는 원본 값의 OLS 서술 통계다.](figures/q4_report_current_slope.png)
 
 **해석:** 최대 I와 수명의 ρ는 Batch 1 -0.495, Batch 2 -0.328, Batch 3 -0.585다. 평균·최대는 다른 정보를 준다. I>0 표본 평균은 시간 가중 평균이나 평균 C-rate가 아니며, 고속 충전의 인과 효과를 증명하지 않는다.
 
@@ -209,7 +209,7 @@ QUESTION 05
 
 그림 9. 15개 초기 후보 중 대표 9개 신호의 Spearman 수명 상관. 전체 15개 결과는 노트북에 있고, Pearson은 아래 표에서 별도로 비교한다.
 
-![그림 9. 15개 초기 후보 중 대표 9개 신호의 Spearman 수명 상관. 전체 15개 결과는 노트북에 있고, Pearson은 아래 표에서 별도로 비교한다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q5_report_correlations.png)
+![그림 9. 15개 초기 후보 중 대표 9개 신호의 Spearman 수명 상관. 전체 15개 결과는 노트북에 있고, Pearson은 아래 표에서 별도로 비교한다.](figures/q5_report_correlations.png)
 
 | log10(ΔQ 분산) ↔ 수명 | Batch 1 | Batch 2 | Batch 3 | 전체 |
 | --- | --- | --- | --- | --- |
@@ -242,7 +242,7 @@ FEATURE ENGINEERING
 
 그림 10. ΔQ 통계 5개 사이의 Pearson 상관. 같은 신호를 여러 통계로 표현했다고 독립적인 정보가 늘어난 것은 아니다.
 
-![그림 10. ΔQ 통계 5개 사이의 Pearson 상관. 같은 신호를 여러 통계로 표현했다고 독립적인 정보가 늘어난 것은 아니다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q5_report_redundancy.png)
+![그림 10. ΔQ 통계 5개 사이의 Pearson 상관. 같은 신호를 여러 통계로 표현했다고 독립적인 정보가 늘어난 것은 아니다.](figures/q5_report_redundancy.png)
 
 **공선성의 구체적 증거:** Qd100=Qd10+ΔQd, IR100=IR10+ΔIR가 성립한다. 15개 전체 후보의 Batch 1 표준화 행렬 rank는 13, 조건수는 약 3.87×10^16이다. ΔQ 최소-범위의 r도 -0.9999다.
 
@@ -360,7 +360,7 @@ Batch 1의 모든 프로토콜별 수명
 
 부록 A. 원문 정책별 평균·관측 최소-최대와 유효/전체 표본 수. 선분은 신뢰구간이 아니다. 평균에는 유효 타깃만 사용한다.
 
-![부록 A. 원문 정책별 평균·관측 최소-최대와 유효/전체 표본 수. 선분은 신뢰구간이 아니다. 평균에는 유효 타깃만 사용한다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q4_protocol_means_batch1.png)
+![부록 A. 원문 정책별 평균·관측 최소-최대와 유효/전체 표본 수. 선분은 신뢰구간이 아니다. 평균에는 유효 타깃만 사용한다.](figures/q4_protocol_means_batch1.png)
 
 **읽는 방법:** 점은 평균, 선분은 관측 최소-최대다. n이 작은 그룹의 순위를 과해석하지 않는다. 이 배치의 원문 프로토콜 그룹은 23개다. C1·전환 SOC·C2와 suffix는 원본 구성을 보존했다.
 
@@ -374,7 +374,7 @@ Batch 2의 모든 프로토콜별 수명
 
 부록 B. 원문 정책별 평균·관측 최소-최대와 유효/전체 표본 수. 선분은 신뢰구간이 아니다. 평균에는 유효 타깃만 사용한다.
 
-![부록 B. 원문 정책별 평균·관측 최소-최대와 유효/전체 표본 수. 선분은 신뢰구간이 아니다. 평균에는 유효 타깃만 사용한다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q4_protocol_means_batch2.png)
+![부록 B. 원문 정책별 평균·관측 최소-최대와 유효/전체 표본 수. 선분은 신뢰구간이 아니다. 평균에는 유효 타깃만 사용한다.](figures/q4_protocol_means_batch2.png)
 
 **읽는 방법:** 점은 평균, 선분은 관측 최소-최대다. n이 작은 그룹의 순위를 과해석하지 않는다. 이 배치의 원문 프로토콜 그룹은 20개다. C1·전환 SOC·C2와 suffix는 원본 구성을 보존했다.
 
@@ -388,7 +388,7 @@ Batch 3의 모든 프로토콜별 수명
 
 부록 C. 원문 정책별 평균·관측 최소-최대와 유효/전체 표본 수. 선분은 신뢰구간이 아니다. 평균에는 유효 타깃만 사용한다.
 
-![부록 C. 원문 정책별 평균·관측 최소-최대와 유효/전체 표본 수. 선분은 신뢰구간이 아니다. 평균에는 유효 타깃만 사용한다.](/Users/lwh/Desktop/battery-project/outputs/day1/figures/q4_protocol_means_batch3.png)
+![부록 C. 원문 정책별 평균·관측 최소-최대와 유효/전체 표본 수. 선분은 신뢰구간이 아니다. 평균에는 유효 타깃만 사용한다.](figures/q4_protocol_means_batch3.png)
 
 **읽는 방법:** 점은 평균, 선분은 관측 최소-최대다. n이 작은 그룹의 순위를 과해석하지 않는다. 이 배치의 원문 프로토콜 그룹은 8개다. C1·전환 SOC·C2와 suffix는 원본 구성을 보존했다.
 

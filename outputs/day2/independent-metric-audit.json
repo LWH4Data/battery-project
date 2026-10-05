@@ -1,0 +1,130 @@
+{
+  "checked_at_utc": "2026-10-05T11:13:35.671377+00:00",
+  "review_mode": "read-only recalculation from saved CSV/JSON only; no fit, predict, model load or replay",
+  "all_checks_pass": true,
+  "checks": {
+    "candidate_69_unique": true,
+    "candidate_family_counts": true,
+    "all69_fold_mean_sd_consistent": true,
+    "global_minimum_one_winner": true,
+    "cv_fold_metrics_from_saved_oof": true,
+    "cv_summary_mean_sd": true,
+    "holdout_and_batch2_metrics": true,
+    "cv35_holdout11_disjoint_all46": true,
+    "oof_fold_membership_and_groups": true,
+    "batch2_47_rows_unique_ids39_scores8unknown": true,
+    "original_targets_exact": true,
+    "original_policy_exact": true,
+    "original_features_float_roundtrip_tolerance": true,
+    "all_predictions_finite_positive": true,
+    "stored_error_columns_or_unknown_blanks": true,
+    "selection_lock_excludes_holdout_test": true,
+    "time_order_lock_before_holdout_and_test": true,
+    "fit_scopes35and46": true,
+    "all_artifact_hashes": true,
+    "selected_solver_no_convergence_warnings": true,
+    "gap_values_sign_units": true,
+    "performance_table_values": true
+  },
+  "winner": {
+    "model_class": "ElasticNet",
+    "alpha": 0.1,
+    "l1_ratio": 0.5
+  },
+  "cv_fold_mean": {
+    "mape_percent": 7.106552982822262,
+    "mae_cycles": 59.21064989782042,
+    "rmse_cycles": 72.23838407529982,
+    "sample_sd_percent_points": 2.6575197264466093
+  },
+  "holdout": {
+    "n": 11,
+    "mape_percent": 12.416025834719544,
+    "mae_cycles": 115.07921479601639,
+    "rmse_cycles": 138.1876240625751
+  },
+  "batch2": {
+    "n": 39,
+    "mape_percent": 33.370421309333565,
+    "mae_cycles": 163.89132689842134,
+    "rmse_cycles": 176.63675206822631
+  },
+  "gaps_percent_points": {
+    "train_valid": 5.309472851897282,
+    "valid_test": 20.95439547461402,
+    "target_test": 24.270421309333564
+  },
+  "batch2_subgroups": {
+    "short_lt500": {
+      "n": 28,
+      "mape_percent": 39.25675577652836,
+      "mae_cycles": 174.30914344903738,
+      "rmse_cycles": 184.6678722894959,
+      "overpredicted_n": 28
+    },
+    "below_B1_target_min": {
+      "n": 30,
+      "mape_percent": 39.16312828391898,
+      "mae_cycles": 175.53460972987776,
+      "rmse_cycles": 185.2981386573344,
+      "overpredicted_n": 30
+    },
+    "within_B1_target_range": {
+      "n": 9,
+      "mape_percent": 14.061398060715517,
+      "mae_cycles": 125.0803841268999,
+      "rmse_cycles": 144.0521276679955,
+      "overpredicted_n": 5
+    }
+  },
+  "batch2_top3_ape": [
+    {
+      "batch_id": "batch2",
+      "cell_id": "6",
+      "policy_readable": "3.6C(9%)-5C",
+      "delta_q_log10var": "-3.53003968650195",
+      "evaluation_stage": "batch2_final_test",
+      "cv_validation_fold": "",
+      "y_true_cycle_life": "393.0",
+      "y_pred_cycle_life": "682.7266807882845",
+      "target_available": "True",
+      "evaluated": "True",
+      "signed_error_cycles": "289.7266807882845",
+      "absolute_error_cycles": "289.7266807882845",
+      "absolute_percentage_error_percent": "73.72180172729885"
+    },
+    {
+      "batch_id": "batch2",
+      "cell_id": "15",
+      "policy_readable": "3.6C(9%)-5C",
+      "delta_q_log10var": "-3.516251926776714",
+      "evaluation_stage": "batch2_final_test",
+      "cv_validation_fold": "",
+      "y_true_cycle_life": "396.0",
+      "y_pred_cycle_life": "677.0491478514514",
+      "target_available": "True",
+      "evaluated": "True",
+      "signed_error_cycles": "281.0491478514514",
+      "absolute_error_cycles": "281.0491478514514",
+      "absolute_percentage_error_percent": "70.9720070331948"
+    },
+    {
+      "batch_id": "batch2",
+      "cell_id": "18",
+      "policy_readable": "5.2C(50%)-4.25C",
+      "delta_q_log10var": "-3.707302736176298",
+      "evaluation_stage": "batch2_final_test",
+      "cv_validation_fold": "",
+      "y_true_cycle_life": "449.0",
+      "y_pred_cycle_life": "755.7201781414155",
+      "target_available": "True",
+      "evaluated": "True",
+      "signed_error_cycles": "306.72017814141554",
+      "absolute_error_cycles": "306.72017814141554",
+      "absolute_percentage_error_percent": "68.31184368405691"
+    }
+  ],
+  "feature_roundtrip_max_absolute_difference": 4.440892098500626e-16,
+  "source_csv_sha256": "dc4e7979037b974d68e88eebc66232b2221095154e747b8f2b15d32a17ddfe21",
+  "run_manifest_sha256": "150f0d1b209f2141578cb46da940bb71aaaa31b79974bda0fd8209fc424195ce"
+}

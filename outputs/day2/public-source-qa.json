@@ -1,0 +1,56 @@
+{
+  "public_source_copy": "/Users/lwh/Documents/Codex/2026-10-01/new-chat-2/work/public-source-audit-v02",
+  "copy_kind": "current Git tracked plus eligible untracked files; raw/venv/work/joblib excluded",
+  "copied_file_count": 93,
+  "python_executable": "/Users/lwh/Desktop/battery-project/.venv/bin/python",
+  "module_loaded_from_copy": "/Users/lwh/Documents/Codex/2026-10-01/new-chat-2/work/public-source-audit-v02/src/modeling_submission.py",
+  "raw_directory_exists": false,
+  "venv_directory_exists": false,
+  "copied_joblib_count": 0,
+  "verification": {
+    "status": "pass",
+    "experiment_id": "v02_submission",
+    "read_only": true,
+    "fit_calls": 0,
+    "predict_calls": 0,
+    "source_csv_sha256": "dc4e7979037b974d68e88eebc66232b2221095154e747b8f2b15d32a17ddfe21",
+    "split_id": "5ac6e1b0a3010116290b6d6a5675dc54a9ecc17867404b891c2d9989369b9fa1",
+    "n_batch1_cells": 46,
+    "artifact_count_verified": 9,
+    "missing_model_files_not_verified": [
+      "development_model.joblib",
+      "final_model.joblib"
+    ],
+    "selection_preceded_holdout_and_test": true
+  },
+  "load_results_passed": true,
+  "result_table_rows": {
+    "candidate_scores": 69,
+    "cv_metrics": 5,
+    "cv_predictions": 35,
+    "holdout_predictions": 11,
+    "batch2_predictions": 47,
+    "performance": 6
+  },
+  "batch2_known_target_rows": 39,
+  "batch2_unknown_target_rows": 8,
+  "winner": {
+    "model_class": "ElasticNet",
+    "alpha": 0.1,
+    "l1_ratio": 0.5
+  },
+  "fit_calls_executed": 0,
+  "predict_calls_executed": 0,
+  "run_or_reproduce_called": false,
+  "notebook03_code_cells": 7,
+  "notebook03_error_outputs": 0,
+  "limitations": [
+    "Public-source snapshot was copied from current working tree; this is not a network fresh clone.",
+    "Used the existing project virtual environment; new-machine environment installation and model replay were not performed."
+  ],
+  "readme_reproduction_description_matches_verified_path": true,
+  "readme_local_links_missing": [],
+  "notebook03_existing_results_branch_uses_load_results": true,
+  "notebook03_model_execution_branch_not_executed": true,
+  "readme_replay_command_not_executed": true
+}

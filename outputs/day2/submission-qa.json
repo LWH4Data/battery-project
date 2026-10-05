@@ -1,0 +1,445 @@
+{
+  "checked_at_utc": "2026-10-05T11:20:39.255803+00:00",
+  "project_version": "0.2.0",
+  "experiment_id": "v02_submission",
+  "status": "PASS",
+  "method": "Read-only hash, notebook execution-output and reporting-link audit; no fit/predict/run/reproduce",
+  "strict_artifact_verification": {
+    "status": "pass",
+    "experiment_id": "v02_submission",
+    "read_only": true,
+    "fit_calls": 0,
+    "predict_calls": 0,
+    "source_csv_sha256": "dc4e7979037b974d68e88eebc66232b2221095154e747b8f2b15d32a17ddfe21",
+    "split_id": "5ac6e1b0a3010116290b6d6a5675dc54a9ecc17867404b891c2d9989369b9fa1",
+    "n_batch1_cells": 46,
+    "artifact_count_verified": 11,
+    "missing_model_files_not_verified": [],
+    "selection_preceded_holdout_and_test": true
+  },
+  "notebook": {
+    "relative_path": "notebooks/03_day2_final_model.ipynb",
+    "sha256": "4d7b525c93346cea45feac06352695efb7040374283d9a8db6d17648b0f4ec57",
+    "executed_code_cells": 7,
+    "error_outputs": 0,
+    "latest_execution": "Existing results loaded; no repeat final test"
+  },
+  "publication_links_checked": 56,
+  "publication_file_links": [
+    {
+      "document": "README.md",
+      "target": "pyproject.toml"
+    },
+    {
+      "document": "README.md",
+      "target": "configs/experiments/v01_baseline.json"
+    },
+    {
+      "document": "README.md",
+      "target": "configs/experiments/v02_submission.json"
+    },
+    {
+      "document": "README.md",
+      "target": "uv.lock"
+    },
+    {
+      "document": "README.md",
+      "target": "configs/environment.json"
+    },
+    {
+      "document": "README.md",
+      "target": "artifacts/experiments/v02_submission/run-manifest.json"
+    },
+    {
+      "document": "README.md",
+      "target": "configs/data-snapshot.json"
+    },
+    {
+      "document": "README.md",
+      "target": "artifacts/splits/batch1_group_holdout_cv.json"
+    },
+    {
+      "document": "README.md",
+      "target": "artifacts/experiments/v02_submission/selection-lock.json"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day1/early_feature_candidates.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "notebooks/00_data_check.ipynb"
+    },
+    {
+      "document": "README.md",
+      "target": "notebooks/01_day1_eda.ipynb"
+    },
+    {
+      "document": "README.md",
+      "target": "notebooks/02_day2_modeling.ipynb"
+    },
+    {
+      "document": "README.md",
+      "target": "notebooks/03_day2_final_model.ipynb"
+    },
+    {
+      "document": "README.md",
+      "target": "data/README.md"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day1/day1-report.md"
+    },
+    {
+      "document": "README.md",
+      "target": "notebooks/01_day1_eda.ipynb"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day1/figures/q1_life_distribution.png"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day1/figures/q2_report_degradation.png"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day1/figures/q3_delta_q_curves.png"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day1/figures/q4_c1_life_relationship.png"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day1/figures/q5_report_correlations.png"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day1/figures/q5_report_redundancy.png"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day1/figures/q3_test_result.png"
+    },
+    {
+      "document": "README.md",
+      "target": "artifacts/experiments/v02_submission/candidate_scores.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day2/candidate_comparison.png"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day2/model_performance.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "artifacts/experiments/v02_submission/metrics.json"
+    },
+    {
+      "document": "README.md",
+      "target": "artifacts/experiments/v02_submission/cv_metrics.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day2/final_evaluation.png"
+    },
+    {
+      "document": "README.md",
+      "target": "artifacts/experiments/v02_submission/batch2_predictions.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "artifacts/experiments/v02_submission/holdout_predictions.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day2/batch2_error_analysis.png"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day2/batch2_error_analysis.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day2/batch2-error-summary.json"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/day2/oof_error_analysis.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "outputs/project-output-guidelines.md"
+    },
+    {
+      "document": "README.md",
+      "target": "AGENTS.md"
+    },
+    {
+      "document": "data/README.md",
+      "target": "../configs/data-snapshot.json"
+    },
+    {
+      "document": "data/README.md",
+      "target": "../README.md"
+    },
+    {
+      "document": "data/README.md",
+      "target": "../notebooks/03_day2_final_model.ipynb"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q1_life_distribution.png"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q2_report_degradation.png"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q2_knee_examples.png"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q3_delta_q_curves.png"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q3_test_result.png"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q4_c1_life_relationship.png"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q4_report_current_patterns.png"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q4_report_current_life.png"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q4_report_current_slope.png"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q5_report_correlations.png"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q5_report_redundancy.png"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q4_protocol_means_batch1.png"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q4_protocol_means_batch2.png"
+    },
+    {
+      "document": "outputs/day1/day1-report.md",
+      "target": "figures/q4_protocol_means_batch3.png"
+    },
+    {
+      "document": "outputs/day2/baseline-summary.md",
+      "target": "v01_baseline_cv.png"
+    }
+  ],
+  "reported_performance_csv_equals_experiment_csv": true,
+  "baseline_module_unchanged": true,
+  "final_model_module_hash_unchanged": true,
+  "charts_visual_qa": "Candidate comparison, final evaluation and error analysis inspected; titles/axes/labels fit",
+  "actual_metrics": {
+    "experiment_id": "v02_submission",
+    "status": "required Day 2 model selection and evaluation completed",
+    "mode": "original_final_evaluation",
+    "winner": {
+      "model_class": "ElasticNet",
+      "alpha": 0.1,
+      "l1_ratio": 0.5
+    },
+    "winner_candidate_id": 38,
+    "search_status": "69 candidates x 5 saved development folds; GridSearchCV completed",
+    "candidate_count": 69,
+    "cv_fit_count_for_search": 345,
+    "features": [
+      "delta_q_log10var"
+    ],
+    "target": "cycle_life",
+    "target_transform": "none",
+    "split_id": "5ac6e1b0a3010116290b6d6a5675dc54a9ecc17867404b891c2d9989369b9fa1",
+    "train_cv": {
+      "n_cells": 35,
+      "n_protocol_groups": 18,
+      "n_folds": 5,
+      "mape_percent_mean": 7.106552982822262,
+      "mape_percent_sample_sd": 2.6575197264466093,
+      "mae_cycles_fold_mean": 59.21064989782042,
+      "rmse_cycles_fold_mean": 72.23838407529982,
+      "pooled_oof": {
+        "mape_percent": 7.067114295407732,
+        "mae_cycles": 59.11321440494419,
+        "rmse_cycles": 75.69903862335954
+      },
+      "aggregation": "unweighted arithmetic validation-fold mean",
+      "limitations": "Used for candidate selection; not nested/unbiased post-selection CV. Fold sample SD is not a confidence interval."
+    },
+    "holdout": {
+      "n_cells": 11,
+      "n_protocol_groups": 5,
+      "model_fit_n_cells": 35,
+      "mape_percent": 12.416025834719544,
+      "mae_cycles": 115.07921479601637,
+      "rmse_cycles": 138.1876240625751
+    },
+    "batch2": {
+      "n_original_cells": 47,
+      "n_predicted_cells": 47,
+      "n_evaluated_cells": 39,
+      "n_unknown_targets": 8,
+      "unknown_target_cell_ids": [
+        22,
+        23,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "model_fit_n_cells": 46,
+      "mape_percent": 33.37042130933356,
+      "mae_cycles": 163.89132689842134,
+      "rmse_cycles": 176.6367520682263
+    },
+    "gaps_percent_points": {
+      "train_valid": 5.309472851897282,
+      "valid_test": 20.954395474614014,
+      "target_test": 24.270421309333557
+    },
+    "gap_definitions": {
+      "Train-Valid": "Valid MAPE minus CV mean MAPE",
+      "Valid-Test": "Batch 2 MAPE minus Valid MAPE",
+      "Target-Test": "Batch 2 MAPE minus 9.1"
+    },
+    "paper_target_mape_percent": 9.1,
+    "development_model_equation": {
+      "stage": "development_fit",
+      "n_fit_cells": 35,
+      "feature": "delta_q_log10var",
+      "scaler_mean": -3.8592502375675215,
+      "scaler_scale": 0.2937398549550416,
+      "coefficient_standardized": -154.12097902563667,
+      "intercept_standardized": 828.8857142857144,
+      "coefficient_original_input_units": -524.6852833410219,
+      "intercept_original_input_units": -1196.0060900963067,
+      "equation": "predicted_cycle_life = -1196.0060901 + (-524.685283341) * delta_q_log10var",
+      "target_unit": "cycles",
+      "prediction_clipping": false
+    },
+    "final_model_equation": {
+      "stage": "all_batch1_final_fit",
+      "n_fit_cells": 46,
+      "feature": "delta_q_log10var",
+      "scaler_mean": -3.9234304460386986,
+      "scaler_scale": 0.3741384249315887,
+      "coefficient_standardized": -154.06297127415692,
+      "intercept_standardized": 844.7173913043479,
+      "coefficient_original_input_units": -411.7806699547831,
+      "intercept_original_input_units": -770.875426286461,
+      "equation": "predicted_cycle_life = -770.875426286 + (-411.780669955) * delta_q_log10var",
+      "target_unit": "cycles",
+      "prediction_clipping": false
+    },
+    "evaluation_status": {
+      "model_selection": "completed",
+      "grid_search": "completed",
+      "holdout": "completed",
+      "batch2": "completed",
+      "batch3": "not performed; optional"
+    },
+    "honest_evaluation": {
+      "holdout_or_test_used_for_selection": false,
+      "test_driven_retuning": false,
+      "test_prediction_calls_this_run": 1,
+      "batch2_prior_eda": true,
+      "note": "Assignment required Batch 2 EDA in Day 1; this is not a wholly unobserved dataset. No Batch 2 modeling feedback used for tuning. Replay is not a new independent test."
+    },
+    "solver_records": [
+      {
+        "stage": "winner_cv_fold_1",
+        "model_class": "ElasticNet",
+        "convergence_warning_count": 0,
+        "n_iter": 2,
+        "dual_gap": 4.157690065247672e-12
+      },
+      {
+        "stage": "winner_cv_fold_2",
+        "model_class": "ElasticNet",
+        "convergence_warning_count": 0,
+        "n_iter": 2,
+        "dual_gap": -1.0779196465456927e-12
+      },
+      {
+        "stage": "winner_cv_fold_3",
+        "model_class": "ElasticNet",
+        "convergence_warning_count": 0,
+        "n_iter": 2,
+        "dual_gap": -5.389598232728463e-13
+      },
+      {
+        "stage": "winner_cv_fold_4",
+        "model_class": "ElasticNet",
+        "convergence_warning_count": 0,
+        "n_iter": 2,
+        "dual_gap": 2.508950901442561e-12
+      },
+      {
+        "stage": "winner_cv_fold_5",
+        "model_class": "ElasticNet",
+        "convergence_warning_count": 0,
+        "n_iter": 2,
+        "dual_gap": 4.516111622596609e-12
+      },
+      {
+        "stage": "development_fit_35",
+        "model_class": "ElasticNet",
+        "convergence_warning_count": 0,
+        "n_iter": 2,
+        "dual_gap": 4.157690065247672e-13
+      },
+      {
+        "stage": "final_batch1_fit_46",
+        "model_class": "ElasticNet",
+        "convergence_warning_count": 0,
+        "n_iter": 2,
+        "dual_gap": -2.5307678658029307e-12
+      }
+    ],
+    "prediction_quality": {
+      "development_oof": {
+        "nonpositive_prediction_count": 0,
+        "nonpositive_prediction_cell_ids": [],
+        "predictions_clipped": false
+      },
+      "holdout": {
+        "nonpositive_prediction_count": 0,
+        "nonpositive_prediction_cell_ids": [],
+        "predictions_clipped": false
+      },
+      "batch2": {
+        "nonpositive_prediction_count": 0,
+        "nonpositive_prediction_cell_ids": [],
+        "predictions_clipped": false
+      }
+    },
+    "preprocessing": "fold/partition train-only StandardScaler; no target transform, feature additions, imputation, exclusion or prediction clipping"
+  },
+  "submission_scope": "Preparation completed; course submission to be performed by user; Batch 3 optional omitted"
+}

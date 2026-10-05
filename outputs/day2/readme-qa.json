@@ -45,5 +45,6 @@
   },
   "canonical_write_status": "PASS",
   "review_status": "PASS: source, environment, entrypoints, confirmed/pending states reviewed",
-  "github_repository": "https://github.com/LWH4Data/battery-project"
+  "github_repository": "https://github.com/LWH4Data/battery-project",
+  "record_status": "Historical v01 README preparation snapshot; superseded by submission-qa.json for current v02 results"
 }

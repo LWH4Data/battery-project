@@ -1,2 +1,8 @@
 *.pdf binary
 *.png binary
+*.csv -text
+*.py text eol=lf
+*.json text eol=lf
+*.ipynb text eol=lf
+*.toml text eol=lf
+uv.lock text eol=lf

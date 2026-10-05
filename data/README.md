@@ -25,8 +25,12 @@ data/raw/
 
 - 원본 확인: `notebooks/00_data_check.ipynb`.
 - Day 1: 모든 셀의 사이클 summary와 실제 cycle 10·100의 `Vdlin/Qdlin`을 준비한다. 초기 상세 전류는 필요한 셀·사이클에서 직접 읽는다.
-- 모델 입력 후보: `outputs/day1/early_feature_candidates.csv`, 셀당 한 행. 현재 v01은 `delta_q_log10var`만 사용한다.
+- 모델 입력 후보: `outputs/day1/early_feature_candidates.csv`, 셀당 한 행. v01과 최종 v02는 `delta_q_log10var`만 사용한다.
 - `interim/`: 반복 읽기 비용을 줄일 때 사용하는 중간 저장소. 현재 전체 상세값을 별도 파일로 저장하지 않았다.
-- `processed/`: 최종 피처·처리 규칙이 확정되면 모델 입력 데이터를 저장할 위치.
+- `processed/`: 향후 별도 모델 입력을 저장할 위치. 이번 단일 피처 입력은 기존 Day 1 CSV를 그대로 사용한다.
 
 설치·실행 순서와 검증 범위는 [프로젝트 README](../README.md)를 참고한다. 셀·사이클 제외, 결측 대체, 보간·클리핑은 임의로 적용하지 않는다.
+
+## 원본 없이 최종 결과 확인
+
+공개 저장소의 피처 CSV·분할·v02 지표/예측으로 [03_day2_final_model.ipynb](../notebooks/03_day2_final_model.ipynb)를 실행할 수 있다. 기존 결과가 있으면 열람만 하며 MAT를 다시 읽거나 Test를 다시 예측하지 않는다. 원본 MAT는 00·01 원본 확인과 EDA를 재실행할 때 필요하다. 01은 원본 크기·SHA-256을 검증한다. Batch 2는 47셀 예측을 보존하고 수명 미상 8셀을 지표에서만 제외했다.

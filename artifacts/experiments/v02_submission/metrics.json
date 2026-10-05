@@ -1,0 +1,186 @@
+{
+  "experiment_id": "v02_submission",
+  "status": "required Day 2 model selection and evaluation completed",
+  "mode": "original_final_evaluation",
+  "winner": {
+    "model_class": "ElasticNet",
+    "alpha": 0.1,
+    "l1_ratio": 0.5
+  },
+  "winner_candidate_id": 38,
+  "search_status": "69 candidates x 5 saved development folds; GridSearchCV completed",
+  "candidate_count": 69,
+  "cv_fit_count_for_search": 345,
+  "features": [
+    "delta_q_log10var"
+  ],
+  "target": "cycle_life",
+  "target_transform": "none",
+  "split_id": "5ac6e1b0a3010116290b6d6a5675dc54a9ecc17867404b891c2d9989369b9fa1",
+  "train_cv": {
+    "n_cells": 35,
+    "n_protocol_groups": 18,
+    "n_folds": 5,
+    "mape_percent_mean": 7.106552982822262,
+    "mape_percent_sample_sd": 2.6575197264466093,
+    "mae_cycles_fold_mean": 59.21064989782042,
+    "rmse_cycles_fold_mean": 72.23838407529982,
+    "pooled_oof": {
+      "mape_percent": 7.067114295407732,
+      "mae_cycles": 59.11321440494419,
+      "rmse_cycles": 75.69903862335954
+    },
+    "aggregation": "unweighted arithmetic validation-fold mean",
+    "limitations": "Used for candidate selection; not nested/unbiased post-selection CV. Fold sample SD is not a confidence interval."
+  },
+  "holdout": {
+    "n_cells": 11,
+    "n_protocol_groups": 5,
+    "model_fit_n_cells": 35,
+    "mape_percent": 12.416025834719544,
+    "mae_cycles": 115.07921479601637,
+    "rmse_cycles": 138.1876240625751
+  },
+  "batch2": {
+    "n_original_cells": 47,
+    "n_predicted_cells": 47,
+    "n_evaluated_cells": 39,
+    "n_unknown_targets": 8,
+    "unknown_target_cell_ids": [
+      22,
+      23,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "model_fit_n_cells": 46,
+    "mape_percent": 33.37042130933356,
+    "mae_cycles": 163.89132689842134,
+    "rmse_cycles": 176.6367520682263
+  },
+  "gaps_percent_points": {
+    "train_valid": 5.309472851897282,
+    "valid_test": 20.954395474614014,
+    "target_test": 24.270421309333557
+  },
+  "gap_definitions": {
+    "Train-Valid": "Valid MAPE minus CV mean MAPE",
+    "Valid-Test": "Batch 2 MAPE minus Valid MAPE",
+    "Target-Test": "Batch 2 MAPE minus 9.1"
+  },
+  "paper_target_mape_percent": 9.1,
+  "development_model_equation": {
+    "stage": "development_fit",
+    "n_fit_cells": 35,
+    "feature": "delta_q_log10var",
+    "scaler_mean": -3.8592502375675215,
+    "scaler_scale": 0.2937398549550416,
+    "coefficient_standardized": -154.12097902563667,
+    "intercept_standardized": 828.8857142857144,
+    "coefficient_original_input_units": -524.6852833410219,
+    "intercept_original_input_units": -1196.0060900963067,
+    "equation": "predicted_cycle_life = -1196.0060901 + (-524.685283341) * delta_q_log10var",
+    "target_unit": "cycles",
+    "prediction_clipping": false
+  },
+  "final_model_equation": {
+    "stage": "all_batch1_final_fit",
+    "n_fit_cells": 46,
+    "feature": "delta_q_log10var",
+    "scaler_mean": -3.9234304460386986,
+    "scaler_scale": 0.3741384249315887,
+    "coefficient_standardized": -154.06297127415692,
+    "intercept_standardized": 844.7173913043479,
+    "coefficient_original_input_units": -411.7806699547831,
+    "intercept_original_input_units": -770.875426286461,
+    "equation": "predicted_cycle_life = -770.875426286 + (-411.780669955) * delta_q_log10var",
+    "target_unit": "cycles",
+    "prediction_clipping": false
+  },
+  "evaluation_status": {
+    "model_selection": "completed",
+    "grid_search": "completed",
+    "holdout": "completed",
+    "batch2": "completed",
+    "batch3": "not performed; optional"
+  },
+  "honest_evaluation": {
+    "holdout_or_test_used_for_selection": false,
+    "test_driven_retuning": false,
+    "test_prediction_calls_this_run": 1,
+    "batch2_prior_eda": true,
+    "note": "Assignment required Batch 2 EDA in Day 1; this is not a wholly unobserved dataset. No Batch 2 modeling feedback used for tuning. Replay is not a new independent test."
+  },
+  "solver_records": [
+    {
+      "stage": "winner_cv_fold_1",
+      "model_class": "ElasticNet",
+      "convergence_warning_count": 0,
+      "n_iter": 2,
+      "dual_gap": 4.157690065247672e-12
+    },
+    {
+      "stage": "winner_cv_fold_2",
+      "model_class": "ElasticNet",
+      "convergence_warning_count": 0,
+      "n_iter": 2,
+      "dual_gap": -1.0779196465456927e-12
+    },
+    {
+      "stage": "winner_cv_fold_3",
+      "model_class": "ElasticNet",
+      "convergence_warning_count": 0,
+      "n_iter": 2,
+      "dual_gap": -5.389598232728463e-13
+    },
+    {
+      "stage": "winner_cv_fold_4",
+      "model_class": "ElasticNet",
+      "convergence_warning_count": 0,
+      "n_iter": 2,
+      "dual_gap": 2.508950901442561e-12
+    },
+    {
+      "stage": "winner_cv_fold_5",
+      "model_class": "ElasticNet",
+      "convergence_warning_count": 0,
+      "n_iter": 2,
+      "dual_gap": 4.516111622596609e-12
+    },
+    {
+      "stage": "development_fit_35",
+      "model_class": "ElasticNet",
+      "convergence_warning_count": 0,
+      "n_iter": 2,
+      "dual_gap": 4.157690065247672e-13
+    },
+    {
+      "stage": "final_batch1_fit_46",
+      "model_class": "ElasticNet",
+      "convergence_warning_count": 0,
+      "n_iter": 2,
+      "dual_gap": -2.5307678658029307e-12
+    }
+  ],
+  "prediction_quality": {
+    "development_oof": {
+      "nonpositive_prediction_count": 0,
+      "nonpositive_prediction_cell_ids": [],
+      "predictions_clipped": false
+    },
+    "holdout": {
+      "nonpositive_prediction_count": 0,
+      "nonpositive_prediction_cell_ids": [],
+      "predictions_clipped": false
+    },
+    "batch2": {
+      "nonpositive_prediction_count": 0,
+      "nonpositive_prediction_cell_ids": [],
+      "predictions_clipped": false
+    }
+  },
+  "preprocessing": "fold/partition train-only StandardScaler; no target transform, feature additions, imputation, exclusion or prediction clipping"
+}

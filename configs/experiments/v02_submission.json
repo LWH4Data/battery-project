@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "experiment_id": "v02_submission",
+  "decision_status": "user_approved_final_submission_design",
+  "source_csv": "outputs/day1/early_feature_candidates.csv",
+  "source_csv_sha256": "dc4e7979037b974d68e88eebc66232b2221095154e747b8f2b15d32a17ddfe21",
+  "split_manifest": "artifacts/splits/batch1_group_holdout_cv.json",
+  "split_id": "5ac6e1b0a3010116290b6d6a5675dc54a9ecc17867404b891c2d9989369b9fa1",
+  "random_state": 42,
+  "features": [
+    "delta_q_log10var"
+  ],
+  "target": "cycle_life",
+  "target_transform": "none",
+  "observation_scope": "first 100 cycles; actual cycles 10 and 100 for this feature",
+  "feature_definition": "log10(var(Qdlin_100-Qdlin_10, ddof=0)) on the verified original common 1000-point Vdlin grid; numeric Ah^2 variance; no epsilon",
+  "preprocessing": "StandardScaler fitted on each training partition only",
+  "imputation": "none",
+  "cell_exclusion": "none",
+  "prediction_clipping": false,
+  "candidate_models": [
+    "LinearRegression",
+    "Ridge",
+    "ElasticNet"
+  ],
+  "alpha_values": [
+    0.0001,
+    0.00031622776601683794,
+    0.001,
+    0.0031622776601683794,
+    0.01,
+    0.03162277660168379,
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0,
+    31.622776601683793,
+    100.0,
+    316.22776601683796,
+    1000.0,
+    3162.2776601683795,
+    10000.0
+  ],
+  "elastic_net_l1_ratio_values": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "candidate_count": 69,
+  "grid_search": {
+    "class": "sklearn.model_selection.GridSearchCV",
+    "n_jobs": 1,
+    "error_score": "raise",
+    "refit": false,
+    "selection_metric": "lowest unweighted arithmetic mean of five validation-fold MAPE values",
+    "exact_tie_break": "fixed order: LinearRegression, Ridge then ElasticNet; within family ascending alpha then ascending l1_ratio; exact floats only, no tolerance",
+    "cv": "explicit saved five-fold group indices on the 35 development cells",
+    "optuna_used": false
+  },
+  "fixed_solver_settings": {
+    "Ridge": {
+      "solver": "svd",
+      "fit_intercept": true
+    },
+    "ElasticNet": {
+      "selection": "cyclic",
+      "max_iter": 100000,
+      "tol": 1e-08,
+      "random_state": 42,
+      "fit_intercept": true
+    },
+    "convergence_warnings": "raise and stop; no performance-dependent solver adjustments"
+  },
+  "fit_and_evaluation_order": [
+    "69-setting group CV using development 35 cells only",
+    "lock the winner and training design on disk before hold-out/test prediction",
+    "fit winner on development 35 cells and evaluate hold-out 11 cells once",
+    "refit the same winner parameters on all Batch 1 46 cells",
+    "predict all Batch 2 47 cells once and evaluate the 39 known positive targets"
+  ],
+  "primary_metric": "MAPE_percent",
+  "auxiliary_metrics": [
+    "MAE_cycles",
+    "RMSE_cycles",
+    "pooled_OOF_MAPE_percent"
+  ],
+  "paper_target_mape_percent": 9.1,
+  "gaps_percent_points": {
+    "Train-Valid": "Valid MAPE minus CV mean MAPE",
+    "Valid-Test": "Batch 2 MAPE minus Valid MAPE",
+    "Target-Test": "Batch 2 MAPE minus 9.1"
+  },
+  "batch2_missing_target_policy": "preserve all 47 rows and predictions; compute errors and metrics only for 39 known targets; preserve eight unknown targets without imputation",
+  "batch3": "not evaluated; optional assignment omitted",
+  "reproduction_policy": "fixed-winner replay only; no search or selection; writes a separate reproduction and is not an independent final test"
+}
